@@ -47,7 +47,7 @@ I aim to describe and visualize the movie data from 2006-2016.'''
     st.write("  ")
     st.write(df.describe())
     for i in df.columns:
-        d_type = 'String of Characters' if type(df[i].iloc[0] == str) else 'Numerical'
+        d_type = 'String of Characters' if type(df[i].iloc[0]) is str else 'Numerical'
         st.markdown(f"""
 <h2>{i}</h2>
 <div style="display: grid; grid-template-columns: 1fr 1fr;">
